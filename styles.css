@@ -1,0 +1,1309 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+body {
+    margin: 5px 0px;
+    font-family:Courier New, Courier, monospace;
+  
+}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+h2 {
+    font-family: Caveat;
+}
+
+:root {
+    --greengradient: linear-gradient(to bottom left, #CDF3A8, #26EECC);
+    --purplegradient: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);
+    --orangegradient: linear-gradient(90deg, rgba(255,199,4,1) 19%, rgba(253,139,29,1) 53%, rgba(194,30,11,1) 90%);
+}
+
+/* START GREEN NAVIGATION BAR */
+
+.topnav {
+    overflow: hidden;
+        background-image: linear-gradient(to bottom left, #CDF3A8, #26EECC); 
+/*        background-image: linear-gradient(90deg, rgba(83,11,194,1) 2%, rgba(253,29,69,1) 75%, rgba(255,124,4,1) 100%);
+    background: linear-gradient(90deg, rgba(255,199,4,1) 19%, rgba(253,139,29,1) 53%, rgba(194,30,11,1) 90%);*/
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    box-shadow: 3px 3px 3px gray;
+}
+.topnav a {
+        float: left;
+        display: block;
+        color:black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+.active {
+    background-color:white;
+   
+    
+}
+.topnav .icon {
+    display: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+.topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: black;
+    
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav.responsive .dropdown {
+            float: none;
+        }
+
+        .topnav.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .topnav.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+}
+
+/* END GREEN NAVIGATION BAR */
+
+
+
+/* START PURPLE NAVIGATION BAR */
+
+.topnav-purp {
+    overflow: hidden;
+    background-image: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    box-shadow: 3px 3px 3px gray;
+}
+.topnav-purp a {
+        float: left;
+        display: block;
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+.active {
+    background-color: white;
+}
+.topnav-purp .icon {
+    display: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+.topnav-purp a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: black;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}.dropdown:hover .dropdown-content {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    .topnav-purp a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav-purp a.icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav-purp.responsive {
+        position: relative;
+    }
+
+        .topnav-purp.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav-purp.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav-purp.responsive .dropdown {
+            float: none;
+        }
+
+        .topnav-purp.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .topnav-purp.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+}
+
+/* END PURPLE NAVIGATION BAR */
+
+
+
+/* START ORANGE NAVIGATION BAR */
+
+.topnav-orange {
+    overflow: hidden;
+    background: var(--orangegradient);
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: auto;
+    box-shadow: 3px 3px 3px gray;
+}
+.topnav-orange a {
+        float: left;
+        display: block;
+        color: black;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+.active {
+    background-color: white;
+}
+.topnav-orange .icon {
+    display: none;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+.topnav-orange a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: black;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    .topnav-orange a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .topnav-orange a.icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav-orange.responsive {
+        position: relative;
+    }
+
+        .topnav-orange.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav-orange.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .topnav-orange.responsive .dropdown {
+            float: none;
+        }
+
+        .topnav-orange.responsive .dropdown-content {
+            position: relative;
+        }
+
+        .topnav-orange.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+}
+
+/* END ORANGE NAVIGATION BAR */
+
+
+
+/* For desktop: */
+/*.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}*/
+
+
+
+
+
+
+
+/* START BUILDING A SHOWCASE AREA */
+
+.showcase-area{
+    width:90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.showcase-area-container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    padding-top:20px;
+    
+}
+.showcase-area-container-left {
+    font-family: Caveat;
+    font-size: 2em;
+    border: 1px solid red;
+    display: inline;
+    width: 50%;
+    height: auto;
+    float: left;
+}
+.showcase-area-container-right {
+    text-align: center;
+    border: 1px solid red;
+    width: 50%;
+    display: inline;
+    height: auto;
+    float: left;
+}
+.container-left-big-title{
+    text-align:center;
+    text-transform:capitalize;
+
+}
+.container-left-paragraph-text{
+
+}
+.container-right-image{
+    width: 75%;
+    height:auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+     For mobile phones: 
+    [class*="col-"] {
+        width: 100%;
+        margin-top: 2.5rem;
+    }
+}
+
+/* BELOW IS THE CODE WE'LL USE IN A MEDIA QUERY TO DISPLAY THE CONTAINER ITEMS AS FLEX. IT IS COMMENTED OUT IN BELOW IN THE SHOWCASE AREA.*/
+/*.showcase-area-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;*/
+/*    display:flex;*/
+/*flex-direction: column;
+    padding-top: 20px;
+}*/
+
+/* END BUILDING A SHOWCASE AREA */
+
+
+
+
+/* START GREEN FOOTER */
+
+.foot-green {
+   
+    background-image: linear-gradient(to bottom left, #CDF3A8, #26EECC);
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 2em;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+}
+
+/* END GREEN FOOTER */
+
+
+
+/* START PURPLE FOOTER */
+
+.foot-purple {
+    background-image: linear-gradient(90deg, rgba(83,11,194,1) 2%, rgba(253,29,69,1) 75%, rgba(255,124,4,1) 100%);
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 2em;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+
+    position: absolute;
+}
+
+/* END PURPLE FOOTER */
+
+
+
+/* START ORANGE FOOTER */
+
+.foot-orange {
+    background: linear-gradient(90deg, rgba(255,199,4,1) 19%, rgba(253,139,29,1) 53%, rgba(194,30,11,1) 90%);
+    width: 100%;
+    margin: auto;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 2em;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+}
+
+/* END ORANGE FOOTER */
+
+
+
+
+/* START ABOUT ABOUT ME TIMELINE */
+
+
+
+
+/*header {
+    position: relative;
+    width:100%;
+    padding: 10px;
+    border-radius: 10px;
+ 
+}*/
+
+
+/*footer {
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: relative;
+    width: 100%;
+    height:auto;
+    bottom: 0;
+    border: 5px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: hsla(90, 6%, 45%, .5);
+
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    padding: 10px 0px 10px;
+    justify-content: center;
+    column-gap: 20px;*/
+/*    border: 2px solid red;*/
+
+/*}
+
+.grid-item-right {
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+    justify-content: center;
+    align-content: center;
+    border: 25px groove red;
+    border-radius: 10px;
+    position:relative;
+   
+}
+
+.grid-item-left {
+    display: inline-flex;
+    background-color: white;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;*/
+    /*    justify-content: center;*/
+    /*align-items: center;
+    border-radius: 10px;
+    font-size: 1.5em;
+   
+    text-shadow: 2px 2px 2px gray;
+   
+    
+}
+
+.divcaption{
+    position:relative;
+
+
+}
+
+img1{
+   
+    width:50%;
+    height:auto;
+    object-fit:contain;
+  
+}
+
+#overflowTest {
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    width: 200px;
+    height: 100px;
+    overflow-y: scroll;*/
+/*    border: 1px solid #ccc;
+   */
+    
+/*}*/
+
+
+/* END ABOUT ME TIMELINE */
+
+
+
+
+
+  
+
+
+
+/* Navigational Links Section */
+/* There are four posibilities beginning possibilities when it comes to links: link, hover, visited, active */
+/* Beginning of underlining navigational links effect */
+
+/*ul {
+    text-align: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #800000;
+    height: 70px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   
+    background-color: #38444d;
+}
+
+
+li{
+    float:left;
+}
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+/*ul li {
+display: inline-block;
+margin: 0 .5em;
+}
+
+ ul li a {
+text-decoration: none;
+color: black;
+
+position: relative;
+display: block;
+border: 3px solid #800000;
+background-color:white;
+
+border-radius: 10px;
+}
+
+ ul li a:hover {
+        border: 3px solid #800000;
+        background-color: #800000;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px black;
+        
+    }
+
+ul li a:active {
+    color: red;
+}
+
+
+.dropdown {
+}
+
+.dropbtn {*/
+/*}*/
+/*.nav-links li a::after {
+    content: '';
+    background-color: yellow;
+    width: 0;
+    height: 3px;
+    border-radius:25%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}*/
+
+/*.nav-links li a:hover::after{
+    width:100%;
+}*/
+
+
+
+/* Ending of underline effect when hovering over internal navigational links */
+
+
+/* *****HOME PAGE***** */
+
+/*tr, th, td {
+    background-color: black;
+    color: white;
+    border: 3px solid red;
+    width: 50%;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 5px;
+
+}
+
+td:hover{
+    background-color:yellow;
+    color:black;
+    border:none;
+
+}
+
+
+.trainingtable {
+    display: table;
+    max-width: 40rem;
+    height: auto;
+    margin: 10px auto;
+    border: 5px solid red;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.caption{
+    caption-side:bottom;
+}*/
+
+/*
+div {
+    border: 2px solid red;
+}*/
+/*.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.imgplaydiv{
+    float:right;
+}
+
+
+
+.pp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+
+/* ***** CREATING ADJUSTABLE NAVIGATION HEADER ***** */
+
+/*
+header a{
+    text-decoration:none;
+}
+*/
+/*header{
+    background-color:black;
+    color:white;
+    padding: 0px 20px;
+    height:50px;
+    display:flex;*/
+/*    justify-content:space-between;*/
+    /*border-radius:5px;
+    border:2px solid red;
+    align-content:center;
+}
+
+ul{
+    height:100%;
+    display:flex;
+    list-style:none;
+    justify-content:space-around;
+    align-items:center;
+    
+
+    
+}
+
+ul a {
+    color: white;
+    padding:5px;
+    border-radius:5px;
+    text-decoration:none;
+   
+}
+ul li {
+    padding: 5px;
+    margin: auto 10px;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+
+
+ #hamburger-icon{
+     margin: auto 0;
+     display:block;
+     cursor: pointer;
+ }
+
+
+
+ #hamburger-icon div{
+     width:35px;
+     height:3px;
+     background-color:red;
+     margin:6px 0;
+ }*/
+
+/*.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);*/
+/*    transform: rotate(-45deg) translate(-6px, 6px);*/
+    /*transform: rotate(-45deg) translateY(-15px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}*/
+
+/*.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}*/
+
+/*.open .bar3{
+    opacity:0;
+}*/
+
+
+
+
+.open .mobile-menu {
+    display:block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.mobile-menu {
+    display:none;
+    position: absolute;
+    top: 90px;
+    margin:auto;
+
+    padding:10px;
+    height: calc(30vh - 50px);
+
+ 
+background-color:black;
+color:white;
+border: 1px solid red;
+border-radius:5px;
+
+
+}
+
+    .mobile-menu li {
+        margin-bottom: 10px;
+        border: 2px solid white;
+    }
+
+    .mobile-menu li:hover{
+        background-color:white;
+        color:black;
+    }
+
+   
+
+/*@media only screen and (max-width: 800px) {
+    header nav {
+        display: none;
+    }*/
+
+    
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    #hamburger-icon{
+        display: none;
+    }
+}
+
+
+
+    /* ***** ENDING ADJUSTABLE NAVIGATION HEADER ***** */
+
+
+
+
+
+
+
+
+
+
+    /* *****EDUCATION PAGE***** */
+    /* *****HOBBIES PAGE***** */
+    /* *****PROJECTS PAGE***** */
+
+
+
+.container{
+    position:relative;
+    width:50%;
+    height:auto;
+    text-align:center;
+    display:block;
+    padding: 20px 0px;
+   
+}
+
+.projimage {
+    height:auto;
+    width: 50%;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    margin: 10px;
+    margin:auto;
+
+}
+
+
+/*.overlaytext:hover{
+    height:50%;
+}*/
+
+.overlay {
+    position: absolute;
+    bottom:20px;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 50%;
+    height: 0;
+    transition: .5s ease;
+    opacity: .75;
+    margin: auto;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+
+.container:hover .overlay {
+    height: 50%;
+    padding-bottom:20px;
+}
+
+
+.overlaytext {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+    /* *****PROJECTS PAGE***** */
+
+    .media-scroller {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 25%;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-left: 50px;
+    }
+
+    .media-element {
+        display: grid;
+        grid-template-rows: min-content;
+        padding-top: 40px;
+    }
+
+        .media-element > img {
+            inline-size: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 5%;
+            width: 3in;
+            height: 3in;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        }
+
+
+    .media-element2 {
+        display: grid;
+        grid-template-rows: min-content;
+        padding-left: 45px;
+    }
+
+        .media-element2 > img {
+            inline-size: 100%;
+            aspect-ratio: 2 / 1;
+            object-fit: contain;
+            height: 3in;
+            width: 2in;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 5%
+        }
+
+    .albumimages {
+        margin: 5px 5px;
+        border-radius: 90%;
+    }
+
+    .bookimages {
+        margin: 5px 5px;
+        border-radius: 10%;
+    }
+
+    .movieimages {
+        margin: 5px 5px;
+        border-radius: 10%;
+    }
+    /* *****ABOUT PAGE***** */
+
+
+    /* Creating a timeline start */
+
+.timeline ul {
+    padding: 75px 0;
+    
+    margin-bottom: 20px;
+}
+
+
+        .timeline ul li {
+            list-style: none;
+            position: relative;
+            width: 6px;
+            margin: 0 auto;
+            padding-top: 50px;
+            background-color: black;
+        }
+
+    .timeline time {
+        display: block;
+        font-size: 22px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+
+    .timeline ul li:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: all 1.7s;
+        background-color: inherit;
+        z-index: 1;
+    }
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background-image: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);
+    border-radius: 15px;
+    color: white;
+    transition: all 2s;
+    opacity: 0;
+}
+
+    .timeline ul li:nth-child(odd) div {
+        left: 45px;
+        transform: translateX(200px);
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: calc(-400px - 45px + 6px);
+        transform: translateX(-200px);
+    }
+
+    .timeline ul li.in-view:after {
+        background-color: black;
+    }
+
+    .timeline ul li.in-view div {
+        transform: none !important;
+        opacity: 1;
+    }
+
+    /* Creating a timeline end */
+
+
+
+    .heading-title {
+        display: flex;
+        padding-left: 50px;
+        padding-top: 10px;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .classic-list {
+        list-style-type: square;
+        padding: 10px 20px;
+    }
+
+    .lists {
+        background-color: black;
+        color: white;
+        float: right;
+    }
+
+    .images {
+        float: right;
+        width: 4in;
+        height: 6in;
+        object-fit: cover;
+        margin-top: 200px;
+    }
+
+    .imagegallery {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 9in;
+    }
+
+
+
+
+    /* ***** PRACTICE POINTS ***** */
+    /* The use of max-width and min-width will increase the usability of the webpage with smaller screens. */
+    /* To have font span for any screen wdith, we can set body{width:100%} then the element to p{font-size:2em;} this does not look like its working with divs inside of a grid.*/
+    /* Looking at fonts and how to resize them a the browser window decreases */
+    /* Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.*/
+    /* Just like colors, don't be scared to contrast fonts */
+    /* Use the "Space Mono" font for headings, and "Muli" for text */
+    /* Need to continue working on how to overscroll-x */
+    /* The default element for most elements is inline or block */
+    /* If you want to center an image inside of a div, set the left and right margins to auto and change the img inline element into an img block level element*/
+    /* When setting trans to a block with text, use the RGBA color value to avoid minimizing the transparency of the text within the block. */
+
+
+    /* Setting an absolute div centered completeley within a relative div */
+    /* div.absolute {
+  position: absolute;
+  background:gray;
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+
+}*/
+
+
+.mask1 {
+    mask-image: url(louisville.png);
+    mask-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+

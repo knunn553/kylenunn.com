@@ -1,0 +1,90 @@
+﻿/*body {
+}
+
+.picture-right {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    float: right;
+}*/
+
+/*Begin Resset*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img {
+    display: block;
+}
+
+/*End Reset*/
+
+/*Begin Utility Classes*/
+.nowrap{
+    white-space:nowrap;
+}
+
+.offscreen{
+    position:absolute;
+    left: -10000px;
+}
+/*End Utility Classes*/
+
+body{
+    min-height:100vh;
+    background-color:aliceblue;
+}
+.container {
+    background-image: url(boston-live.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    
+}
+
+
+.hero {
+    border-bottom: 2px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: hsla(0, 0%, 0%, .703);
+}
+
+.h1{
+    font-size:500%;
+    color:white;
+}
+
+.profile-pic{
+    width:35%;
+}
+
+.profile-pic img{
+    width:100%;
+    height:auto;
+    min-width:100px;
+    border:5px double gray;
+   
+}
+
+
+
+
+
+.example{
+    margin-top:1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img{
+    width:25%;
+    height:auto;
+}
+
