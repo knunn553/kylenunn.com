@@ -1,23 +1,84 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Quicksand:wght@500&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 5px 0px;
-    font-family:Courier New, Courier, monospace;
-  
-}
-*{
-    box-sizing:border-box;
-    margin:0;
+    font-family:Quicksand;
     padding:0;
-}
-h2 {
-    font-family: Caveat;
+    margin:0;
+  
 }
 
 :root {
     --greengradient: linear-gradient(to bottom left, #CDF3A8, #26EECC);
     --purplegradient: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);
     --orangegradient: linear-gradient(90deg, rgba(255,199,4,1) 19%, rgba(253,139,29,1) 53%, rgba(194,30,11,1) 90%);
+    --hue-neutral: 200;
+    --hue-correct: 145;
+    --hue-wrong: 0;
 }
+.quiz-body{
+    --hue: var(--hue-neutral);
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vh;
+    height:100vh;
+    margin:auto;
+    background-color: hsl(var(--hue), 100%, 50%);
+}
+/* NOTE: We want to make sure our quiz is dead center in the screen. We can use display, justify-content, and align-items properties to the quiz-body class to make this happen.*/
+
+body.correct{
+    --hue: var(--hue-correct);
+}
+
+body.wrong{
+    --hue: var(--hue-correct);
+}
+
+.quiz-container{
+/*    width:800px;
+    max-width:80%;*/
+border: 1px solid red;
+}
+
+.btn-grid{
+    display:grid;
+}
+
+.hide{
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+h2 {
+    font-family: Quicksand;
+    text-align:center;
+    
+/*    text-decoration:underline;*/
+   
+}
+
+h1{
+   color:red;
+   text-shadow: 3px 3px 3px black;
+   font-family:Quicksand;
+}
+
+
 
 /* START GREEN NAVIGATION BAR */
 
@@ -81,9 +142,8 @@ h2 {
         text-align: left;
     }
 .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: white;
     color: black;
-    
 }
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -197,7 +257,7 @@ h2 {
         text-align: left;
     }
 .topnav-purp a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: white;
     color: black;
 }
 .dropdown-content a:hover {
@@ -311,7 +371,7 @@ h2 {
         text-align: left;
     }
 .topnav-orange a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: white;
     color: black;
 }
 .dropdown-content a:hover {
@@ -365,53 +425,6 @@ h2 {
 }
 
 /* END ORANGE NAVIGATION BAR */
-
-
-
-/* For desktop: */
-/*.col-1 {
-    width: 8.33%;
-}
-.col-2 {
-    width: 16.66%;
-}
-.col-3 {
-    width: 25%;
-}
-.col-4 {
-    width: 33.33%;
-}
-.col-5 {
-    width: 41.66%;
-}
-.col-6 {
-    width: 50%;
-}
-.col-7 {
-    width: 58.33%;
-}
-.col-8 {
-    width: 66.66%;
-}
-.col-9 {
-    width: 75%;
-}
-.col-10 {
-    width: 83.33%;
-}
-.col-11 {
-    width: 91.66%;
-}
-.col-12 {
-    width: 100%;
-}*/
-
-
-
-
-
-
-
 /* START BUILDING A SHOWCASE AREA */
 
 .showcase-area{
@@ -423,7 +436,7 @@ h2 {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     align-items:center;
-    display:flex;
+    display:block;
     flex-direction:column;
     padding-top:20px;
     
@@ -431,19 +444,21 @@ h2 {
 .showcase-area-container-left {
     font-family: Caveat;
     font-size: 2em;
-    border: 1px solid red;
-    display: inline;
-    width: 50%;
+/*    border: 1px solid red;*/
+    display: block;
+    width: 100%;
     height: auto;
-    float: left;
+/*    float: left;*/
+margin-bottom: 20px;
 }
 .showcase-area-container-right {
     text-align: center;
-    border: 1px solid red;
-    width: 50%;
-    display: inline;
+    
+    width: 100%;
+    display: block;
     height: auto;
-    float: left;
+    /*    float: left;*/
+    margin-bottom: 20px;
 }
 .container-left-big-title{
     text-align:center;
@@ -544,44 +559,16 @@ h2 {
 
 /* START ABOUT ABOUT ME TIMELINE */
 
-
-
-
-/*header {
-    position: relative;
-    width:100%;
-    padding: 10px;
-    border-radius: 10px;
- 
-}*/
-
-
-/*footer {
-    text-align: center;
-    background-color: white;
-    color: black;
-    position: relative;
-    width: 100%;
-    height:auto;
-    bottom: 0;
-    border: 5px solid red;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: hsla(90, 6%, 45%, .5);
-
-}
-
-
-.grid-container {
+/*.grid-container {
     display: grid;
     grid-template-columns: auto auto;
     background-color: white;
     padding: 10px 0px 10px;
     justify-content: center;
-    column-gap: 20px;*/
-/*    border: 2px solid red;*/
+    column-gap: 20px;
+    border: 2px solid red;
 
-/*}
+}
 
 .grid-item-right {
     background-color: white;
@@ -601,9 +588,9 @@ h2 {
     background-color: white;
     padding: 20px;
     font-size: 30px;
-    text-align: center;*/
-    /*    justify-content: center;*/
-    /*align-items: center;
+    text-align: center;
+        justify-content: center;
+    align-items: center;
     border-radius: 10px;
     font-size: 1.5em;
    
@@ -632,11 +619,11 @@ img1{
     padding: 15px;
     width: 200px;
     height: 100px;
-    overflow-y: scroll;*/
-/*    border: 1px solid #ccc;
-   */
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+   
     
-/*}*/
+}*/
 
 
 /* END ABOUT ME TIMELINE */
@@ -1062,47 +1049,77 @@ border-radius:5px;
 
     /* *****PROJECTS PAGE***** */
 
-    .media-scroller {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 25%;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
-        padding-left: 50px;
+.media-scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    overflow-x: auto;
+    overscroll-behavior-inline:revert;
+/*    padding-left: 50px;*/
+    margin: 30px;
+    border: 10px solid black;
+    outline:10px solid orange;
+    align-items:center;
+    border-radius:5px;
+    
+    
+}
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    padding-top: 40px;
+/*    border: 2px solid blue;*/
+    justify-content:center;
+    align-items:center;
+}
+
+    .media-element > img {
+        inline-size: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 5%;
+        width: 3in;
+        height: 3in;
+/*        border: 2px solid red;*/
+        align-items:center;
+        margin:auto;
     }
 
-    .media-element {
-        display: grid;
-        grid-template-rows: min-content;
-        padding-top: 40px;
+.media-element > img:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    transition: all .3s;
+}
+
+
+.media-element2 {
+    display: grid;
+    grid-template-rows: min-content;
+/*    padding-top: 20px;*/
+    margin: 20px;
+/*    border: 2px solid red;*/
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    /*    align-items:center;*/
+}
+
+    .media-element2 > img {
+        inline-size: 100%;
+        aspect-ratio: 2 / 1;
+        object-fit: contain;
+        height: 3in;
+        width: 2in;
+        border-radius: 5%;
+        border: 1px solid black;
+        align-items: center;
+        margin: auto;
     }
 
-        .media-element > img {
-            inline-size: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            border-radius: 5%;
-            width: 3in;
-            height: 3in;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-        }
-
-
-    .media-element2 {
-        display: grid;
-        grid-template-rows: min-content;
-        padding-left: 45px;
-    }
-
-        .media-element2 > img {
-            inline-size: 100%;
-            aspect-ratio: 2 / 1;
-            object-fit: contain;
-            height: 3in;
-            width: 2in;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 5%
-        }
+            .media-element2 > img:hover {
+                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+                transition:all .3s;
+            }
 
     .albumimages {
         margin: 5px 5px;
@@ -1118,83 +1135,91 @@ border-radius:5px;
         margin: 5px 5px;
         border-radius: 10%;
     }
+
+    .title{
+/*        border:2px solid red;*/
+        margin: 5px;
+        justify-content:center;
+        text-align:center;
+        
+    }
     /* *****ABOUT PAGE***** */
 
 
     /* Creating a timeline start */
 
 .timeline ul {
-    padding: 75px 0;
-    
+    padding: 75px 0;  
     margin-bottom: 20px;
 }
 
 
-        .timeline ul li {
-            list-style: none;
-            position: relative;
-            width: 6px;
-            margin: 0 auto;
-            padding-top: 50px;
-            background-color: black;
-        }
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: black;
+}
 
-    .timeline time {
-        display: block;
-        font-size: 22px;
-        margin-bottom: 8px;
-        font-weight: 700;
-    }
+.timeline time {
+display: block;
+font-size: 22px;
+margin-bottom: 8px;
+font-weight: 700;
+}
 
-    .timeline ul li:after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        transition: all 1.7s;
-        background-color: inherit;
-        z-index: 1;
-    }
+.timeline ul li:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 1.7s;
+    background-color: inherit;
+    z-index: 1;
+}
 
 .timeline ul li div {
     position: relative;
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background-image: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);
+/*    background-image: linear-gradient(90deg, rgba(255,124,4,1) 2%, rgba(253,29,69,1) 75%,rgba(83,11,194,1) 100%);*/
+background-color:white;
     border-radius: 15px;
-    color: white;
+    color: black;
     transition: all 2s;
     opacity: 0;
 }
 
-    .timeline ul li:nth-child(odd) div {
-        left: 45px;
-        transform: translateX(200px);
-    }
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+    transform: translateX(200px);
+}
 
-    .timeline ul li:nth-child(even) div {
-        left: calc(-400px - 45px + 6px);
-        transform: translateX(-200px);
-    }
+.timeline ul li:nth-child(even) div {
+    left: calc(-400px - 45px + 6px);
+    transform: translateX(-200px);
+}
 
-    .timeline ul li.in-view:after {
-        background-color: black;
-    }
+.timeline ul li.in-view:after {
+    background-color: black;
+}
 
-    .timeline ul li.in-view div {
-        transform: none !important;
-        opacity: 1;
-    }
+.timeline ul li.in-view div {
+    transform: none !important;
+    opacity: 1;
+}
 
     /* Creating a timeline end */
 
 
-
+/*
     .heading-title {
         display: flex;
         padding-left: 50px;
@@ -1227,45 +1252,12 @@ border-radius:5px;
         justify-content: center;
         align-content: center;
         width: 9in;
-    }
+    }*/
 
 
 
 
-    /* ***** PRACTICE POINTS ***** */
-    /* The use of max-width and min-width will increase the usability of the webpage with smaller screens. */
-    /* To have font span for any screen wdith, we can set body{width:100%} then the element to p{font-size:2em;} this does not look like its working with divs inside of a grid.*/
-    /* Looking at fonts and how to resize them a the browser window decreases */
-    /* Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.*/
-    /* Just like colors, don't be scared to contrast fonts */
-    /* Use the "Space Mono" font for headings, and "Muli" for text */
-    /* Need to continue working on how to overscroll-x */
-    /* The default element for most elements is inline or block */
-    /* If you want to center an image inside of a div, set the left and right margins to auto and change the img inline element into an img block level element*/
-    /* When setting trans to a block with text, use the RGBA color value to avoid minimizing the transparency of the text within the block. */
 
-
-    /* Setting an absolute div centered completeley within a relative div */
-    /* div.absolute {
-  position: absolute;
-  background:gray;
-  width: 100px;
-  height: 100px;
-  border: 2px solid red;
-  text-align:center;
-  display:flex;
-  align-items:center;
-  top: 50%;
-  left: 50%;
-  margin: -50px 0 0 -50px;
-
-}*/
-
-
-.mask1 {
-    mask-image: url(louisville.png);
-    mask-repeat: no-repeat;
-}
 
 
 

@@ -45,47 +45,77 @@ window.onscroll = callBack;
 
 
 
-// Working with W3Schools.com
+// Quiz Functions
 
 
 
-// Mini-project: try() and catch()
-//function myFunction() {
-//    const message = document.getElementById("p01");
-//    message.innerHTML = "";
-//    let x = document.getElementById("demo").value;
-//    try {
-//        if (x.trim() == "") throw "empty";
-//        if (isNaN(x)) throw "not a number";
-//        x = Number(x);
-//        if (x < 5) throw "too low";
-//        if (x > 10) throw "too high";
+//function submitFunction() {
+
+//    let yankees = document.getElementById("yankees");
+//    let cardinals = document.getElementById("cardinals");
+//    let rays = document.getElementById("rays");
+//    let redsox = document.getElementById("redsox");
+
+
+//    if (yankees.checked == true) {
+//        document.getElementById("submitButton").innerHTML = "Correct!";
 //    }
-//    catch (er) {
-//        message.innerHTML = "The entered value is " + er; 
+//    else {
+//        document.getElementById("submitButton").innerHTML = "Wrong!";
 //    }
 
 //}
 
 
-//const person = {
-//    firstname: "Kyle",
-//    lastname: "Nunn",
-//    id: 3232,
-//    fullname : function() {
-//        return this.firstname + " " + this.lastname;
+//// Making quiz form appear after user selects Start Quiz
+//function quizAppear() {
+//    if (startbutton.onclick == false) {
+//        document.getElementById("quizform").style.display = "none";
 //    }
-//};
+//    else (startbutton.onclick == true){
+//        document.getElementById("quizform").style.display = "block";
+//    }
+//}
 
-const person = {
-    firstName: "John",
-    lastName: "Doe",
-    id: 5566,
-    fullName: function () {
-        return this.firstName + " " + this.lastName;
-    }
-};
-document.getElementById("demo").innerHTML = person.fullName();
+
+
+const startButton = document.getElementById("start-btn")
+// We are passing the id into a variable JS can understand
+// Then we can add an event listener to the newly created variable and tell it to run quizAppear() function once it's clicked, or on click.
+startButton.addEventListener(onclick, quizAppear)
+
+
+// Essentially what we want to do with the start button once it is clicked is hide it.
+function quizAppear() {
+
+}
+
+// We also need a function that is going to show the next question when we click on the 'next' button.
+function nextQuestion() {
+
+}
+
+// We also need a function that is going to do something when we select an answer
+function selectAnswer() {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

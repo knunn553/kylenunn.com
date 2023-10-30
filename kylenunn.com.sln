@@ -18,6 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal Website Links HTML
 		topnav.html = topnav.html
 		landing.html = landing.html
 		navpage.html = navpage.html
+		quiz.html = quiz.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal Website Links CSS", "Internal Website Links CSS", "{DBCDD1F3-CD47-4653-964A-78BEB5D0F7F2}"

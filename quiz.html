@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+
+    <title>Quiz</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" defer></script>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="logo_kylenunnfitness.png" type="image/x-icon">
+</head>
+<body class="quiz-body">
+
+    <!--<h1> How well do you know Kyle?</h1>
+    <h2> Take the quiz.</h2>-->
+
+
+    <!--<button onclick="startFunction" id="startbutton"> Start Quiz </button>
+    <form id="quizform">
+        <p> What is Kyle's favorite sports team?</p><br />
+
+        <input type="radio" id="yankees" name="fav-team" value="yankees"/>
+        <label for="yankees"> New York Yankees</label><br />
+        <input type="radio" id="cardinals" name="fav-team" value="cardinals" />
+        <label for="cardinals"> St. Louis Cardinals </label><br />
+        <input type="radio" id="rays" name="fav-team" value="rays"/>
+        <label for="rays"> Tampa Bay Rays</label><br />
+        <input type="radio" id="redsox" name="fav-team" value="redsox" />
+        <label for="redsox"> Boston Redsox </label><br />
+        <br />
+        <button type="button" onclick="submitFunction()">Submit Answers</button>
+        <p id="submitButton"></p>
+    </form>-->
+
+
+    <!--<p> Inside of the body, we are going to essentially have two main sections of the application</p>
+    <p> We are going to have a card with everything inside of it including question content and then content for the start button and the next button</p>
+    <p> First, well create the container that will have card like syntax. We'll do a div for that and give it a class name of container.The class name is only so we can style the div in our CSS later. </p>
+    <p> Don't really care about styling right now, more focused on JS Vanilla</p>
+    <p> In the div with the class container, we are going to create a question container becuase our questions will come before the start and next buttons</p>
+    <p> We will make a new div with an id of question-container so we can select it in the javascript later.</p>
+    <p> We also want to create a class of hide so that we know that the question container is hidden by default. The user has to select start to see the questions.</p>
+    <p> Before we add on all the questions content, we are going to create another section which is the control section. We will give it a class of controls so we can style it in our css. </p>
+    <p> Within the controls, we need two different buttons. First we need a start button within the controls div and then we need a next which is in the controls div as well. </p>
+    <p> At the beginning, we are also going to hide the next button, so we are going to give it the hide class, as well. So we are going to put the hide style attribute in the class for next button.</p>
+    <p> Question.. we have given the class styling attribute of hide to the next button. How will we reverse that?</p>
+    <p> Movign forward, we will jump back into the question container, and we are going to need a div that is going to contain our question.</p>
+    <p> The question and the answer buttons are being put into the same container. We question container. The question and the buttons are in seperate divs, though.  </p>
+    <p> We will give the question div an id of question. There is a seperate div just for the buttons which is inside the question container. </p>
+    <p> It is important to defer a js file so it loads after the body of the webpage</p>
+    <p> In every project it is important to set up box sizing to border box for all different elements: *</p>
+    <p> It is important to select all of our elements for before and after: *,*::before, *::after </p>
+    <p> Inside of that, we want the set box sizing to border box. This will make it so the heights and widths are easier to style. </p>
+    <p> In this body, the first thing we want to do it remove the padding and margin and we can set those values equal to 0. </p>-->
+    <!--<p> To set our colors, were going to use css variables to make that easy. </p>
+    <p> Were going to set a variable called hue in the css</p>
+    <p> Our hue neutral will be the color if we don't have anything selected as an answer. We need to define that color in the :root{} of the css file.</p>
+    <p> We can also create, while were at it, a --hue variable for the red/wrong color with a hue value of 0 and a green/correct color of green.</p>
+    <p> In the quiz-body class in sheets, we have to take a background color and set that to hsl. The first thing we need to do is get the variable of our hue.</p>
+    <p> The first thing we need to do is get the variable of our hue, which by default, is just our hue-neutral. </p>
+    <p> We are using hsl, so we need to set a hue (we have that), saturation, and lightness. </p>
+    <p> In order to change our view from the wrong and correct version, we are going to be using classes. </p>-->
+    <!--<p> The next thing we want to work on a styling the container with all the information, giving it a nice card effect. </p>-->
+    <!--<p> We are going to set a width of 800px and a max-width of 80% so that the content doesn't overflow our page</p>-->
+    <!--<p> Displaying as a grid just simply go with display:grid and then we want two columns within the btn-grid or button grid. </p>-->
+    <p> Before coding, it's important to just think about the workflow of the application. In this case, what is going to happen in the quiz. </p>
+    <p> Essentially, there are 3 different things that need to be done</p>
+    <p> We want to be able to start the game, so we have to create a function called start the game or somthing along those lines. </p>
+    
+
+
+    <div class="quiz-container">
+        <div id="question-container" class="hide">
+            <div id="question"> What is Kyle's favorite MLB team? </div>
+            <div id="answer-buttons" class="btn-grid">
+                <button id="btn"> New York Yankees</button>
+                <button id="btn"> St. Louis Cardinals</button>
+                <button id="btn"> Tampa Bay Rays</button>
+                <button id="btn"> Boston Redsox</button>
+
+            </div>
+            
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn"> Start </button>
+            <button id="next-btn" class="next-btn btn hide"> Next </button>
+            <button id="finish-btn" class="finish-btn btn hide">Finish</button>
+        </div>
+    </div>
+
+</body>
+</html>
